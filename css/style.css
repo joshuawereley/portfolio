@@ -6,7 +6,7 @@
 }
 
 :root {
-  --backgorund-1:  #1f1f1f;;
+  --backgorund-1:  #1f1f1f;
   --background-2: linear-gradient(45deg, #12c2e9,  #11998E, #38EF7D);
   --text-color: #ededed;
   --skew-angle1: -3deg;
@@ -25,7 +25,7 @@
 }
 
 .header {
-   position: sticky;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
@@ -200,7 +200,7 @@ section {
    border-radius: 1rem;
    border: 10px solid rgba(225, 225, 225, 0.25);
    transform: translateZ(20px);
-  z-index: 1;
+   z-index: 1;
 }
 
 .home-sci {
