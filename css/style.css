@@ -200,6 +200,7 @@ section {
    border-radius: 1rem;
    border: 10px solid rgba(225, 225, 225, 0.25);
    transform: translateZ(20px);
+  z-index: 1;
 }
 
 .home-sci {
