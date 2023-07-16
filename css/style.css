@@ -133,20 +133,21 @@ section {
 }
 
 .home-content span {
-   color: transparent;
-   -webkit-text-stroke: 1px white;
-   text-shadow: 2px 2px #2ab660;
    letter-spacing: 2px;
+   -webkit-text-stroke-width: 1.5px;
+   -webkit-text-stroke-color: #FFFFFF;
+   -webkit-text-fill-color: #2ab660;
+   text-shadow: 3px 3px 0px #2ab660;
 }
 
 .home-content h3 {
    font-size: 2rem;
    margin: 0;
-   font-weight: 700;
    letter-spacing: 2px;
-   color: transparent;
-   -webkit-text-stroke: 1px white;
-   text-shadow: 2px 2px #2ab660;
+   -webkit-text-stroke-width: 1.5px;
+   -webkit-text-stroke-color: #FFFFFF;
+   -webkit-text-fill-color: #2ab660;
+   text-shadow: 3px 3px 0px #2ab660;
 }
 
 .home-content p {
