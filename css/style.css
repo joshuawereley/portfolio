@@ -25,6 +25,10 @@
    /*border: .2rem solid white;*/
 }
 
+img {
+   transform: translate3d(0,0,0);
+}
+
 .header {
    position: sticky;
    top: 0;
