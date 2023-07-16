@@ -133,21 +133,16 @@ section {
 }
 
 .home-content span {
+   color: var(--text-color);
    letter-spacing: 2px;
-   -webkit-text-stroke-width: 1.5px;
-   -webkit-text-stroke-color: #FFFFFF;
-   -webkit-text-fill-color: #2ab660;
-   text-shadow: 3px 3px 0px #2ab660;
+   text-shadow: 3px 3px 0 #2ab660;
 }
 
 .home-content h3 {
    font-size: 2rem;
    margin: 0;
    letter-spacing: 2px;
-   -webkit-text-stroke-width: 1.5px;
-   -webkit-text-stroke-color: #FFFFFF;
-   -webkit-text-fill-color: #2ab660;
-   text-shadow: 3px 3px 0px #2ab660;
+   text-shadow: 2px 2px 0px #2ab660;
 }
 
 .home-content p {
