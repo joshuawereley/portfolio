@@ -809,4 +809,10 @@ textarea {
    .home-content {
       padding: 20px 10px 20px 10px;
    }
+
+   .home-content span {
+      color: var(--text-color);
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0 #2ab660;
+   }
 }
