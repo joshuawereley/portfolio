@@ -12,4 +12,5 @@
    $headers = "From: $email\r\n";
    $headers .= "Content-type: text/html\r\n"
    mail($to, $subject, $body, $headers);
+   header('Location: index.html');
 ?>
