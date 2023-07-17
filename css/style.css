@@ -821,12 +821,4 @@ textarea {
    .home-content {
       padding: 20px 10px 20px 10px;
    }
-
-   .home-content span {
-      text-shadow: 2px 2px 0 #2ab660;
-   }
-
-   .home-content h3 {
-      text-shadow: 1px 1px 0px #2ab660;
-   }
 }
