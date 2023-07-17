@@ -1,16 +1,17 @@
 <?php
-   $name = trim(strip_tags($_POST['name']));
-   $email = trim(strip_tags($_POST['email']));
-   $phone = trim(strip_tags($_POST['phone']));
-   $subject = trim(strip_tags($_POST['subject']));
-   $message = htmlentities($_POST['message']);
+   $full_name = $_POST['name'];
+   $email_address = $_POST['email'];
+   $mobile_phone = $_POST['phone'];
+   $email_subject = $_POST['subject'];
+   $their_message = $_POST['message'];
    $to = 'u21506915@tuks.co.za';
-   $body = <<<HTML
-   $message
-   $phone
-   HTML;
-   $headers = "From: $email\r\n";
-   $headers .= "Content-type: text/html\r\n"
-   mail($to, $subject, $body, $headers);
-   header('Location: index.html');
+   $email_body = "Full Name: $name.\n".
+                  "Email Address: $email_address.\n".
+                  "Mobile Phone: $mobile_phone.\n".
+                  "Their Message: $their_message.\n";
+   $headers = "From: $email_address \r\n".
+               "Reply-To: $to \r\n";
+               
+   mail($to, $email_subject, $email_body, $headers);
+   header("Location: index.html")
 ?>
