@@ -133,28 +133,11 @@ section {
    margin: 10px 0;
 }
 
-.home-content span {
-   color: #303030;
-   letter-spacing: 2px;
-   text-shadow:
-       1px 1px 0 #2ab660,
-     -1px -1px 0 #2ab660,  
-      1px -1px 0 #2ab660,
-      -1px 1px 0 #2ab660,
-       1px 1px 0 #2ab660;
-}
+
 
 .home-content h3 {
    font-size: 2rem;
    margin: 0;
-   letter-spacing: 2px;
-   color: #303030;
-   text-shadow:
-       1px 1px 0 #2ab660,
-     -1px -1px 0 #2ab660,  
-      1px -1px 0 #2ab660,
-      -1px 1px 0 #2ab660,
-       1px 1px 0 #2ab660;
 }
 
 .home-content p {
