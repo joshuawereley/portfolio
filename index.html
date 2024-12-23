@@ -76,15 +76,55 @@
          <div class="projects-content">
             <h2 class="heading">My Projects</h2>
             <div class="grid-projects">
-               <div class="block">
-                  <img src="img/classconnect.png" alt="portfolio-website" class="project-image"><h3><br>ClassConnect</h3>
+               <div class="project-block" onclick="openModal('classconnect')">
+                  <img src="img/classconnect.png" alt="portfolio-website" class="project-image">
+                  <h3>ClassConnect</h3>
                </div>
-               <div class="block">
-                  <img src="img/kos-banner.png" alt="portfolio-website" class="project-image"><h3><br>Kitchen Of Secrets</h3>
+               <div class="project-block" onclick="openModal('kos')">
+                  <img src="img/kos-banner.png" alt="portfolio-website" class="project-image">
+                  <h3>Kitchen Of Secrets</h3>
                </div>
-               <div class="block">
-                  <img src="img/portfolio-website.png" alt="portfolio-website" class="project-image"><h3><br>My Portfolio</h3>
+               <div class="project-block" onclick="openModal('portfolio')">
+                  <img src="img/portfolio-website.png" alt="portfolio-website" class="project-image">
+                  <h3>My Portfolio</h3>
                </div>
+            </div>
+         </div>
+      </div>
+   
+      <!-- Modal Containers -->
+      <div id="classconnect" class="modal">
+         <div class="modal-content">
+            <span class="close" onclick="closeModal('classconnect')">&times;</span>
+            <h2>ClassConnect</h2>
+            <img src="img/classconnect.png" alt="ClassConnect" class="modal-image">
+            <p>ClassConnect is an innovative education platform designed to streamline communication between students and teachers. Built with modern web technologies, it features real-time messaging, assignment management, and resource sharing capabilities.</p>
+            <div class="modal-links">
+               <a href="https://github.com/yourusername/classconnect" target="_blank" class="modal-btn">View on GitHub</a>
+            </div>
+         </div>
+      </div>
+   
+      <div id="kos" class="modal">
+         <div class="modal-content">
+            <span class="close" onclick="closeModal('kos')">&times;</span>
+            <h2>Kitchen Of Secrets</h2>
+            <img src="img/kos-banner.png" alt="Kitchen Of Secrets" class="modal-image">
+            <p>Kitchen of Secrets is a game where you have to cook for supernatural creatures. It is a fun and challenging adventure that tests your culinary skills and your knowledge of folklore. You are the owner of a mystical restaurant that caters to a variety of customers, from vampires and werewolves to fairies and dragons.</p>
+            <div class="modal-links">
+               <a href="https://github.com/bukhosi-eugene-mpande/Kitchen-of-Secrets" target="_blank" class="modal-btn">View on GitHub</a>
+            </div>
+         </div>
+      </div>
+   
+      <div id="portfolio" class="modal">
+         <div class="modal-content">
+            <span class="close" onclick="closeModal('portfolio')">&times;</span>
+            <h2>My Portfolio</h2>
+            <img src="img/portfolio-website.png" alt="Portfolio Website" class="modal-image">
+            <p>A personal portfolio website built using HTML, CSS, and JavaScript. Features a modern design with smooth animations, responsive layout, and interactive elements. The site showcases my projects, skills, and professional journey.</p>
+            <div class="modal-links">
+               <a href="https://github.com/joshuawereley/portfolio" target="_blank" class="modal-btn">View on GitHub</a>
             </div>
          </div>
       </div>
@@ -166,6 +206,20 @@
 	});
 
    VanillaTilt.init(document.querySelectorAll(".block"),{
+		max: 10,
+		speed: 400,
+      glare: true,
+      "max-glare": 0.5,
+      transition: true,
+      easing: "cubic-bezier(.03,.98,.52,.99)",
+      gyroscope: true,
+      gyroscopeMinAngleX: -45,
+      gyroscopeMaxAngleX: 45,
+      gyroscopeMinAngleY: -45,
+      gyroscopeMaxAngleY: 45
+	});
+
+   VanillaTilt.init(document.querySelectorAll(".project-block"),{
 		max: 10,
 		speed: 400,
       glare: true,

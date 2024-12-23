@@ -50,3 +50,36 @@ window.addEventListener('scroll', () => {
    menuIcon.classList.remove('bx-x');
    navbar.classList.remove('active');
 });
+
+// Function to open modal
+function openModal(modalId) {
+   document.getElementById(modalId).style.display = "block";
+   document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+}
+
+// Function to close modal
+function closeModal(modalId) {
+   document.getElementById(modalId).style.display = "none";
+   document.body.style.overflow = "auto"; // Re-enable scrolling
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+   if (event.target.classList.contains('modal')) {
+       event.target.style.display = "none";
+       document.body.style.overflow = "auto";
+   }
+}
+
+// Close modal when pressing ESC key
+document.addEventListener('keydown', function(event) {
+   if (event.key === 'Escape') {
+       const modals = document.getElementsByClassName('modal');
+       for (let modal of modals) {
+           if (modal.style.display === "block") {
+               modal.style.display = "none";
+               document.body.style.overflow = "auto";
+           }
+       }
+   }
+});

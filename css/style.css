@@ -387,8 +387,10 @@ section {
 }
 
 .project-image {
-   max-width: 100%;
-   height: auto;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   object-position: center;
    border-radius: 1rem;
    border: 10px solid rgba(225, 225, 225, 0.25);
 }
@@ -402,6 +404,141 @@ section {
    border-top: var(--card-lighting);
    border-left: var(--card-lighting);
    box-shadow: var(--card-shadow);
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 10000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+   overflow-y: auto;
+}
+
+.modal-content {
+   position: relative;
+   background: var(--background-1);
+   margin: 5% auto;
+   padding: 2rem;
+   width: 80%;
+   max-width: 800px;
+   border-radius: 1rem;
+   border-top: var(--card-lighting);
+   border-left: var(--card-lighting);
+   box-shadow: var(--card-shadow);
+   animation: modalFade 0.3s ease-in-out;
+}
+
+@keyframes modalFade {
+   from {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.close {
+   position: absolute;
+   right: 1.5rem;
+   top: 1rem;
+   font-size: 2rem;
+   font-weight: bold;
+   color: var(--text-color);
+   cursor: pointer;
+   transition: color 0.3s ease;
+}
+
+.close:hover {
+   color: #888;
+}
+
+.modal-image {
+   width: 100%;
+   height: auto;
+   border-radius: 0.5rem;
+   margin: 1rem 0;
+   border: 5px solid rgba(225, 225, 225, 0.25);
+}
+
+.modal h2 {
+   color: var(--text-color);
+   margin: 0 0 1rem 0;
+   font-size: 2rem;
+}
+
+.modal p {
+   color: var(--text-color);
+   line-height: 1.6;
+   margin: 1rem 0;
+   font-size: 1.1rem;
+}
+
+.modal-links {
+   display: flex;
+   gap: 1rem;
+   margin-top: 1.5rem;
+   flex-wrap: wrap;
+}
+
+.modal-btn {
+   display: inline-block;
+   padding: 0.5rem 0.5rem;
+   border: 3px solid white;
+   border-radius: 0.6rem;
+   color: var(--text-color);
+   text-decoration: none;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   font-weight: bold;
+}
+
+.modal-btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: var(--background-2);
+   z-index: -1;
+   transition: 0.5s;
+}
+
+.modal-btn:hover::before {
+   width: 100%;
+}
+
+.modal-btn:hover {
+   color: var(--background-1);
+}
+
+.project-block {
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.project-block {
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.project-block h3 {
+   padding-top: 16px;
+}
+.project-block:hover {
+   transform: translateY(-5px);
 }
 
 .education {
@@ -770,6 +907,29 @@ textarea {
       transform: translateX(0);
       transition-delay: .25s;
    }
+
+   .modal-content {
+      width: 90%;
+      margin: 10% auto;
+      padding: 1.5rem;
+  }
+
+  .modal h2 {
+      font-size: 1.5rem;
+  }
+
+  .modal p {
+      font-size: 1rem;
+  }
+
+  .modal-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+  }
+
+  .project-image {
+      height: 150px;
+   }
 }
 
 @media (max-width: 520px) {
@@ -868,6 +1028,10 @@ textarea {
    .home-content {
       padding: 20px 10px 20px 10px;
    }
+
+   .project-image {
+      height: 130px;
+  }
 }
 
 @keyframes flicker {
