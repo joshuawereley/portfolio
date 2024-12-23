@@ -42,10 +42,6 @@
    font-size: 20px;
 }
 
-.navbar {
-   position: relative;
-}
-
 .logo {
    position: relative;
    color: var(--text-color);
@@ -54,13 +50,57 @@
 
 .navbar {
    position: relative;
+   display: flex;
+   align-items: center;
 }
 
-.navbar a {
+.navbar a:not(.social-btn) {
    color: var(--text-color);
    font-weight: 500;
    margin-left: 1.5rem;
-   transition: .10s;
+   display: flex;
+   align-items: center;
+   height: 40px;
+}
+
+.navbar .social-btn {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border: .18rem solid white;
+   border-radius: 0.8rem;
+   font-size: 25px;
+   color: white;
+   z-index: 1;
+   overflow: hidden;
+   margin-left: 1.5rem;
+}
+
+.navbar .social-btn:hover {
+   color: var(--body-bg);
+}
+
+.navbar .social-btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: var(--background-2);
+   z-index: -1;
+   transition: .5s;
+}
+
+.navbar .social-btn:hover::before {
+   width: 100%;
+}
+
+.navbar .social-text {
+   display: none;
 }
 
 /*
@@ -75,6 +115,7 @@
   -moz-text-fill-color: transparent;
 }
 */
+
 
 #menu-icon {
    font-size: 30px;
@@ -683,7 +724,9 @@ textarea {
       background: var(--backgorund-1);
       z-index: 1;
       transition: .25s ease;
-      transition-delay:  .25s;
+      transition-delay: .25s;
+      flex-direction: column;
+      align-items: flex-start;
    }
 
    .navbar.active {
@@ -691,12 +734,36 @@ textarea {
       left: 0;
    }
 
-   .navbar a {
+   .navbar a:not(.social-btn) {
       display: block;
       font-size: 20px;
-      margin: 2rem 0;
+      margin: 1rem 0;
+      height: auto;
       transition: .25s ease;
       transition-delay: 0s;
+   }
+
+   .navbar .social-btn {
+      width: auto;
+      height: auto;
+      border: none;
+      font-size: 20px;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: flex-start;
+   }
+   
+   .navbar .social-btn::before {
+      display: none;
+   }
+   
+   .navbar .social-btn i {
+      font-size: 1.2rem;
+   }
+   
+   .navbar .social-text {
+      display: inline;
+      margin-left: 0.5rem;
    }
 
    .navbar.active a {
