@@ -83,3 +83,47 @@ document.addEventListener('keydown', function(event) {
        }
    }
 });
+
+// Existing code...
+
+// Add smooth scroll to logo
+const logo = document.querySelector('.logo');
+logo.addEventListener('click', (event) => {
+   event.preventDefault();
+   window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+   });
+});
+
+// Scroll to top functionality
+const scrollTop = document.querySelector('.scroll-top');
+
+// Show scroll-to-top button when scrolling down
+window.addEventListener('scroll', () => {
+   // Existing scroll code...
+
+   // Show/hide scroll-to-top button
+   let sections = document.querySelectorAll('section');
+   sections.forEach(sec => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      
+      if(top >= offset && top < offset + height) {
+         if(sec.getAttribute('id') !== 'home') {
+            scrollTop.classList.add('active');
+         } else {
+            scrollTop.classList.remove('active');
+         }
+      }
+   });
+});
+
+// Scroll to top when clicking the button
+scrollTop.addEventListener('click', () => {
+   window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+   });
+});
